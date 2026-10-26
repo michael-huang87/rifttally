@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.app_name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="./">{{ site.app_name }}</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+  <main>
+{{ content }}
+  </main>
+  <footer>
+    <p>{{ site.app_name }} was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+    <p>This product uses TCGplayer data but is not endorsed or certified by TCGplayer.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a> · <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+  </footer>
+</body>
+</html>

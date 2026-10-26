@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1>{{ site.app_name }}</h1>
+  <p>An unofficial, fan-made app for tracking your Riftbound trading card collection on iPhone.</p>
+  {% if site.app_store_url != "" %}
+  <p><a class="button" href="{{ site.app_store_url }}">Download on the App Store</a></p>
+  {% else %}
+  <p class="soon">Coming soon to the App Store.</p>
+  {% endif %}
+</section>
+
+<h2>What it does</h2>
+<ul>
+  <li>Scan cards with your camera to add them to your collection. Card recognition runs on your phone.</li>
+  <li>See what your collection is worth, with daily market prices and a value chart over time.</li>
+  <li>Search every card and sealed product, with prices for each printing and finish.</li>
+  <li>Build decks, check them against what you own, and log your matches.</li>
+  <li>Optionally look up graded PSA cards, or talk a deck through with an AI model, using your own API keys.</li>
+</ul>
+<p>There are no accounts, ads, or analytics. Your collection stays on your device. See the <a href="privacy.html">Privacy Policy</a>.</p>
+
+<div class="shots">
+  <figure><img src="assets/img/home.png" alt="Home screen showing portfolio value and a price chart" width="460" height="1000"><figcaption>Collection value</figcaption></figure>
+  <figure><img src="assets/img/search.png" alt="Card search with prices for each card" width="460" height="1000"><figcaption>Card search</figcaption></figure>
+  <figure><img src="assets/img/portfolio.png" alt="Portfolio list of owned cards" width="460" height="1000"><figcaption>Portfolio</figcaption></figure>
+  <figure><img src="assets/img/builder.png" alt="Deck builder" width="460" height="1000"><figcaption>Deck builder</figcaption></figure>
+</div>
