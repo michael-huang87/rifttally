@@ -41,6 +41,12 @@ To show cards, images, and prices, the app downloads public data:
 
 These are plain downloads. The app sends no personal data, collection data, or device identifiers with them. As with any internet request, the server you download from sees your IP address.
 
+Once we have access to Riot Games' official API, the app will also download card data and assets from Riot. Those downloads will follow the same rule and carry no personal data.
+
+## Purchases
+
+If we add paid features or subscriptions, Apple handles the purchase through the App Store. We never receive your payment details. The app only learns from Apple whether a purchase is active on your Apple account.
+
 ## Features that use your own API keys
 
 Two optional features send data to a third party. They only work after you add your own key, and only send data when you use them.

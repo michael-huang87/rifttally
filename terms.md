@@ -15,9 +15,13 @@ These terms cover your use of the {{ site.app_name }} iPhone app and this websit
 
 {{ site.app_name }} is not affiliated with TCGplayer, Cardmarket, PSA, Google, or Anthropic.
 
-## Free to use
+## Card data and images
 
-The app is free. It has no paid features, subscriptions, or ads.
+Today, card data and card images reach the app through third-party sources, including the community card database Riftcodex and TCGplayer. Once we have access to Riot Games' official API, we plan to use Riot's official card data and assets instead, under Riot's developer terms.
+
+## Paid features
+
+The app is free to download. We may add paid features in the future, or offer some features only with a paid subscription. Any paid features will follow Riot Games' policies for fan projects and developer products. Subscriptions would be sold and billed through Apple's App Store, under Apple's terms, and you would manage or cancel them in your Apple account settings.
 
 ## Prices are estimates
 
