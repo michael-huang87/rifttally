@@ -70,4 +70,4 @@ If this policy changes, we will update this page and the date at the top. If a c
 
 ## Contact
 
-Questions about this policy: <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.
+Questions about this policy: <a href="mailto:{{ site.privacy_email }}">{{ site.privacy_email }}</a>.
