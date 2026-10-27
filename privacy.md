@@ -34,7 +34,7 @@ The app uses the camera to scan cards. Card recognition runs on your iPhone. Cam
 To show cards, images, and prices, the app downloads public data:
 
 - the card list from Riftcodex,
-- market prices from TCGplayer data (through TCGCSV) and Cardmarket, and from a static file host we run,
+- market prices from TCGplayer data (through TCGCSV) and Cardmarket,
 - card images from Riot Games' and TCGplayer's image servers,
 - tournament decklists from OpenRift,
 - currency exchange rates from Frankfurter.
@@ -47,14 +47,34 @@ Once we have access to Riot Games' official API, the app will also download card
 
 If we add paid features or subscriptions, Apple handles the purchase through the App Store. We never receive your payment details. The app only learns from Apple whether a purchase is active on your Apple account.
 
+## Event search
+
+If you search for Riftbound events near you, the app looks up the zip code you type with Apple Maps to get its approximate coordinates, then sends those coordinates and a search radius to Riot Games' event site (events.playriftbound.com). The app does not use your device's location.
+
 ## Features that use your own API keys
 
 Two optional features send data to a third party. They only work after you add your own key, and only send data when you use them.
 
-- **PSA cert lookup.** When you look up a graded card, the app sends the certificate number and your PSA token to PSA (api.psacard.com).
-- **Deck chat.** When you ask a question about a deck, the app sends your question, the deck, your collection, and prices to Google Gemini or Anthropic Claude, whichever key you added, together with that key.
+### PSA cert lookup
 
-That data goes directly from your iPhone to the provider. We never see it. The provider's own terms and privacy policy govern what it does with the data, including whether it may use it to improve its models. Read them before you add a key. You can remove a key at any time in the app's Profile tab.
+When you look up a graded card, or the app refreshes population numbers for your PSA slabs, it sends the certificate number and your PSA token to PSA (api.psacard.com).
+
+### Deck chat
+
+Deck chat is optional. It is off until you add your own Google Gemini or Anthropic API key in the Profile tab, and it only sends data when you ask a question.
+
+When you ask a question, the app sends this to Google Gemini or Anthropic, whichever key you added:
+
+- your question and the earlier messages in that chat,
+- the deck: its name, its cards and counts, and current deck rule problems,
+- card text from the card list, such as names, types, and rules text,
+- how many copies of each card you own, for cards the chat looks up, including the cards in your collection when it asks for them,
+- tournament decklists from OpenRift, when the chat looks at top lists,
+- your API key, which goes only to that provider.
+
+The chat does not send prices, deck value, or cost to finish. Those stay in the app.
+
+This data goes directly from your iPhone to the provider. RiftTally servers do not receive it, and we never see it. The provider handles it under its own terms and privacy policy, including whether it may use it to improve its models. Read them before you add a key. Your chats are saved on your iPhone. You can remove a key at any time in the Profile tab.
 
 ## Sharing you start
 
