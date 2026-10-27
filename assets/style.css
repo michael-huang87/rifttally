@@ -63,20 +63,23 @@ h2 { margin-top: 32px; }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 16px;
 }
 .features div { background: var(--mint-light); border-radius: 12px; padding: 4px 16px; }
 .features h3 { margin: 12px 0 0; font-size: 1.05em; }
 .features p { margin: 4px 0 12px; }
 
+/* Flex rather than grid so a short last row sits centered. */
 .shots {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   margin: 24px 0 8px;
 }
-@media (max-width: 600px) { .shots { grid-template-columns: repeat(2, 1fr); } }
+.shots figure { flex: 0 0 calc((100% - 32px) / 3); }
+@media (max-width: 600px) { .shots figure { flex-basis: calc((100% - 16px) / 2); } }
 .note { color: var(--muted); font-size: 0.9em; }
 .shots figure { margin: 0; text-align: center; color: var(--muted); font-size: 0.9em; }
 .shots img {
