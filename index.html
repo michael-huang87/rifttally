@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="hero">
   <h1>{{ site.app_name }}</h1>
-  <p>An unofficial, fan-made app for tracking your Riftbound trading card collection on iPhone.</p>
+  <p>An unofficial, fan-made iPhone app for Riftbound collectors. Scan your cards, see what your collection is worth, and keep track of your sealed product, pack openings and events in one place.</p>
   {% if site.app_store_url != "" %}
   <p><a class="button" href="{{ site.app_store_url }}">Download on the App Store</a></p>
   {% else %}
@@ -12,18 +12,23 @@ layout: default
 </section>
 
 <h2>What it does</h2>
-<ul>
-  <li>Scan cards with your camera to add them to your collection. Card recognition runs on your phone.</li>
-  <li>See what your collection is worth, with daily market prices and a value chart over time.</li>
-  <li>Search every card and sealed product, with prices for each printing and finish.</li>
-  <li>Build decks, check them against what you own, and log your matches.</li>
-  <li>Optionally look up graded PSA cards, or talk a deck through with an AI model, using your own API keys.</li>
-</ul>
+<div class="features">
+  <div><h3>Scan with your camera</h3><p>Hold up a card and {{ site.app_name }} names it, picks the right printing, and counts each copy as you scan. Recognition runs on your phone.</p></div>
+  <div><h3>Live market prices</h3><p>See what your collection is worth today, follow its value on a chart over time, and spot your biggest movers.</p></div>
+  <div><h3>Sealed product</h3><p>Track boxes and packs next to your cards, with what you paid, what they are worth now, and an expected value based on pull rates.</p></div>
+  <div><h3>Pack openings</h3><p>Log what you open, scan the hits, and see whether each opening beat the sealed price.</p></div>
+  <div><h3>Events</h3><p>Keep upcoming and past events in one place, with your rounds, record, entry fees and prize packs.</p></div>
+  <div><h3>PSA graded cards</h3><p>Add your graded copies with their grade and cert number, and look up PSA population.</p></div>
+</div>
 <p>There are no accounts, ads, or analytics. Your collection stays on your device. See the <a href="privacy.html">Privacy Policy</a>.</p>
 
+<h2>Screenshots</h2>
 <div class="shots">
-  <figure><img src="assets/img/home.png" alt="Home screen showing portfolio value and a price chart" width="460" height="1000"><figcaption>Collection value</figcaption></figure>
-  <figure><img src="assets/img/search.png" alt="Card search with prices for each card" width="460" height="1000"><figcaption>Card search</figcaption></figure>
-  <figure><img src="assets/img/portfolio.png" alt="Portfolio list of owned cards" width="460" height="1000"><figcaption>Portfolio</figcaption></figure>
-  <figure><img src="assets/img/builder.png" alt="Deck builder" width="460" height="1000"><figcaption>Deck builder</figcaption></figure>
+  <figure><img src="assets/img/home.jpg" alt="Home screen showing portfolio value and a value chart" width="600" height="1005"><figcaption>Portfolio</figcaption></figure>
+  <figure><img src="assets/img/scanner.jpg" alt="Scanner identifying a card and counting it" width="600" height="1005"><figcaption>Scanner</figcaption></figure>
+  <figure><img src="assets/img/card.jpg" alt="Card detail showing the card art and finish" width="600" height="1005"><figcaption>Card detail</figcaption></figure>
+  <figure><img src="assets/img/sealed.jpg" alt="Booster display with expected value, top hits and cost" width="600" height="1005"><figcaption>Sealed detail</figcaption></figure>
+  <figure><img src="assets/img/openings.jpg" alt="Opened booster packs with the hits pulled" width="600" height="1005"><figcaption>Pack openings</figcaption></figure>
+  <figure><img src="assets/img/events.jpg" alt="Event with its rounds and record" width="600" height="1005"><figcaption>Events</figcaption></figure>
 </div>
+<p class="note">Screenshots use sample data.</p>
